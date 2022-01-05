@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  nestjs:
+    build: backend
+    ports: 
+      - 8080:3000
+  db:
+    build: db
+    restart: always
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 8081:5432
