@@ -13,4 +13,4 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     ports:
-      - 8081:5432
+      - 8079:5432
