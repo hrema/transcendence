@@ -1,9 +1,12 @@
 import styled from "styled-components";
+import color from '../../colors'
 
-import colors from '../../colors'
+interface StyleProps {
+	page?: string;
+}
 
-export const ChatWrapper = styled.div`
-	display: flex;
+export const ChatWrapper = styled.div<StyleProps>`
+	display: ${({ page }) => page === 'chat' ? 'flex' : 'none'};
 	flex: 1 0 auto;
 	flex-direction: row;
 `;
@@ -13,18 +16,18 @@ export const ChatNav = styled.ul`
 	flex-direction: column;
 	align-items: center;
 	width: 25rem;
-	border-right: 1px solid ${colors.foregroundVisited};
-	background: ${colors.darkBackgroundNormal};
+	border-right: 1px solid ${color.foregroundVisited};
+	background: ${color.darkBackgroundNormal};
 `;
 
 export const ChatId = styled.li`
 	display: flex;
 	width: 24rem;
 	border-radius: .3rem;
-	background: ${colors.decorationFocus};
+	background: ${color.decorationFocus};
 	:hover {
 		transition: .3s;
-		background: ${colors.foregroundVisited};
+		background: ${color.foregroundVisited};
 		cursor: pointer;
 	}
 `;
@@ -80,7 +83,7 @@ export const DialogData = styled.div`
 	align-items: center;
 	margin: .3rem;
 	border-radius: .3rem;
-	background: ${colors.darkBackgroundNormal};
+	background: ${color.darkBackgroundNormal};
 	justify-content: start;
 `;
 
@@ -114,9 +117,9 @@ export const ChatInput = styled.input`
 	border-radius: .3rem 0 0 .3rem;
 	font-size: 1.5rem;
 	outline: none;
-	background: ${colors.darkBackgroundNormal};
-	color: ${colors.darkForegroundNormal};
-	border: 1px solid ${colors.darkBackgroundAlternate};`;
+	background: ${color.darkBackgroundNormal};
+	color: ${color.darkForegroundNormal};
+	border: 1px solid ${color.darkBackgroundAlternate};`;
 
 export const ChatButton = styled.button`
 	display: flex;
@@ -128,7 +131,7 @@ export const ChatButton = styled.button`
 	box-sizing: border-box;
 	border-radius: 0 .3rem .3rem 0;
 	cursor: pointer;
-	background: ${colors.darkBackgroundNormal};
-	color: ${colors.decorationFocus};
+	background: ${color.darkBackgroundNormal};
+	color: ${color.decorationFocus};
 	border: none;
 `;

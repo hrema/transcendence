@@ -13,7 +13,7 @@ const ButtonDrop = () => {
 	)
 }
 
-function Header() {
+const Header = () => {
 	return (
 		<HeaderWrapper>
 			<HeaderNameProject>Transcendence</HeaderNameProject>

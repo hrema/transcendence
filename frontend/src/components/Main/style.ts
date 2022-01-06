@@ -1,8 +1,11 @@
 import styled from 'styled-components';
-import color from '../../colors';
 
-export const MainWrapper = styled.div`
-	display: flex;
+interface StyleProps {
+	page?: string;
+}
+
+export const MainWrapper = styled.div<StyleProps>`
+	display: ${({ page }) => page === 'home' ? 'flex' : 'none'};
 	flex: 1 0 auto;
 	flex-direction: column;
 	align-items: center;

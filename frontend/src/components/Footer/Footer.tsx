@@ -13,7 +13,7 @@ const FooterIcon = () => {
 	)
 }
 
-function Footer() {
+const Footer = () => {
 	return (
 		<FooterWrapper>
 			<FooterInfo>afafaf</FooterInfo>

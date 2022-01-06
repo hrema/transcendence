@@ -1,3 +1,4 @@
+import { ChatProps } from './interfaces';
 import { 
 	ChatWrapper,
 	ChatNav,
@@ -17,9 +18,10 @@ import {
 } from './style';
 
 
-function Chat() {
+export function Chat(props: ChatProps) {
+	const { page } = props;
 	return(
-		<ChatWrapper>
+		<ChatWrapper page={page}>
 			<ChatNav>
 				<ChatId>
 					<ChatIdImg src={require('../../assets/images/avatarka.png')} />
